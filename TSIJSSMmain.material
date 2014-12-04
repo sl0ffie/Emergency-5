@@ -1,0 +1,51 @@
+material 01___Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.5882 0.5882 0.5882 1
+			diffuse 0.5882 0.5882 0.5882 1
+			specular 0.9 0.9 0.9 0 10
+
+			texture_unit
+			{
+				texture 04-1432_C.tif
+			}
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+material 03___Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0.098 0.5922 1
+			diffuse 0 0.098 0.5922 1
+			specular 0.9 0.9 0.9 0 10
+			scene_blend alpha_blend
+
+			texture_unit
+			{
+			}
+
+			texture_unit
+			{
+				colour_op_ex source1 src_current src_manual 1 1 1
+				colour_op_multipass_fallback src_alpha one_minus_src_alpha
+				alpha_op_ex blend_manual src_diffuse src_manual 0.75
+			}
+		}
+
+	}
+
+}
